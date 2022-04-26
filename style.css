@@ -1,27 +1,29 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+html {
+    height: 1000vh;
+}
 
-
-/* START MAIN SECTION  */
-.main {
+/* START HOME SECTION  */
+.home {
     height: 100vh;
     background-image: url(images/hero-bg.jpg);
     background-size: cover;
     background-position:center center;
 }
 
-.main .overlay {
+.home .overlay {
     background-color: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
 }
-.main .navbar {
+.home .navbar {
     background-color: rgba(0,0,0,0.5);
     padding: 20px 0px;
 }
 
-.main .navbar .logo a{
+.home .navbar .logo a{
     font-size: 28px;
     font-weight: 600;
     color: #fff;
@@ -30,17 +32,277 @@ body {
 .navbar a i {
     font-size: 12px;
     line-height: 0;
-    margin-left: 5px;
+    margin-left: 10px;
     color: #fff;
 }
-.navbar ul li > a {
+.nav-item {
+    padding: 0px 15px !important;
+
+}
+.nav-item > a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    padding: 0px 10px !important;
     font-weight: 400;
+    position: relative;
+}
+.nav-item > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.nav-item > a::after {
+    display: none;
+}
+.nav-item:hover > a::before{
+    visibility: visible;
+    width: 80%;
+}
+.nav-item > a:hover{
+    color: #fff;
 }
 
 
 
-/* END MAIN SECTION  */
+.navbar .dropdown ul {
+    display: block;
+    top: 58px !important;
+    position: absolute;
+    left: 15px;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+    transition: 0.3s;
+    list-style: none;
+
+}
+.navbar .dropdown ul li {
+    min-width: 200px;
+    padding: 8px 0px;
+}
+.navbar .dropdown ul a {
+    padding: 10px 20px !important;
+    font-size: 14px;
+    text-transform: none;
+    color: #4e4e4e;
+    text-decoration: none;
+}
+.navbar .dropdown ul a i {
+    font-size: 12px;
+    color: black;
+}
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+    color: #0078ff;
+}
+.navbar .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+    list-style: none;
+}
+.navbar .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+}
+
+
+.navbar-toggler-icon{
+    color: #fff;
+}
+.navbar-toggler {
+    color: transparent;
+}
+.home .home-title{
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 80px;
+}
+.home .home-subtitle{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 60px;
+    position: relative;
+}
+.home .home-subtitle::after{
+    content: '';
+    position: absolute;
+    left: -65px;
+    animation-name: typing ;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    1%{content: '|';}
+    2%{content: 'D|';}
+    3%{content: 'De|';}
+    4%{content: 'Des|';}
+    5%{content: 'Desi|';}
+    6%{content: 'Desig|';}
+    7%{content: 'Design|';}
+    8%{content: 'Designe|';}
+    9%{content: 'Designer|';}
+    10%{content: 'Designer';}
+    11%{content: 'Designer|';}
+    12%{content: 'Designer';}
+    13%{content: 'Designer|';}
+    14%{content: 'Designer';}
+    15%{content: 'Designer|';}
+    16%{content: 'Designe|';}
+    17%{content: 'Design|';}
+    18%{content: 'Desig|';}
+    19%{content: 'Desi|';}
+    20%{content: 'Des|';}
+    21%{content: 'De|';}
+    22%{content: 'Dev|';}
+    23%{content: 'Deve|';}
+    24%{content: 'Devel|';}
+    25%{content: 'Devele|';}
+    26%{content: 'Develep|';}
+    27%{content: 'Develepe|';}
+    28%{content: 'Develeper|';}
+    29%{content: 'Develeper';}
+    30%{content: 'Develeper|';}
+    31%{content: 'Develeper';}
+    32%{content: 'Develeper|';}
+    33%{content: 'Develeper';}
+    34%{content: 'Develeper|';}
+    35%{content: 'Develepe|';}
+    36%{content: 'Develep|';}
+    37%{content: 'Devele|';}
+    38%{content: 'Devel|';}
+    39%{content: 'Deve|';}
+    40%{content: 'Dev|';}
+    41%{content: 'De|';}
+    42%{content: 'D|';}
+    43%{content: '|';}
+    44%{content: 'F|';}
+    45%{content: 'Fr|';}
+    46%{content: 'Fre|';}
+    47%{content: 'Free|';}
+    48%{content: 'Freel|';}
+    49%{content: 'Freela|';}
+    50%{content: 'Freelan|';}
+    51%{content: 'Freelanc|';}
+    52%{content: 'Freelance|';}
+    53%{content: 'Freelancer|';}
+    54%{content: 'Freelancer';}
+    55%{content: 'Freelancer|';}
+    56%{content: 'Freelancer';}
+    57%{content: 'Freelancer|';}
+    58%{content: 'Freelancer';}
+    59%{content: 'Freelancer|';}
+    60%{content: 'Freelance|';}
+    61%{content: 'Freelanc|';}
+    62%{content: 'Freelan|';}
+    63%{content: 'Freela|';}
+    64%{content: 'Freel|';}
+    65%{content: 'Free|';}
+    66%{content: 'Fre|';}
+    67%{content: 'Fr|';}
+    68%{content: 'F|';}
+    69%{content: 'P|';}
+    70%{content: 'Ph|';}
+    71%{content: 'Pho|';}
+    72%{content: 'Phot|';}
+    73%{content: 'Photo|';}
+    74%{content: 'Photog|';}
+    75%{content: 'Photogr|';}
+    76%{content: 'Photogra|';}
+    77%{content: 'Photograp|';}
+    78%{content: 'Photograph|';}
+    79%{content: 'Photographe|';}
+    80%{content: 'Photographer|';}
+    81%{content: 'Photographer';}
+    82%{content: 'Photographer|';}
+    83%{content: 'Photographer';}
+    84%{content: 'Photographer|';}
+    85%{content: 'Photographer';}
+    86%{content: 'Photographer|';}
+    87%{content: 'Photographe|';}
+    88%{content: 'Photograph|';}
+    89%{content: 'Photograp|';}
+    90%{content: 'Photogra|';}
+    91%{content: 'Photogr|';}
+    92%{content: 'Photog|';}
+    93%{content: 'Photo|';}
+    94%{content: 'Phot|';}
+    95%{content: 'Pho|';}
+    96%{content: 'Ph|';}
+    97%{content: 'P|';}
+    98%{content: '|';}
+    99%{content: '';}
+    100%{content: '|';}
+}
+
+@media screen and (max-width:992px){
+    .navbar-nav{
+        position: absolute;
+    background-color: #ffffff ;
+    right: 30px;
+    top: 55px;
+    }
+    
+    .nav-item a{
+        color: #4e4e4e;
+    }
+    .navbar a i {
+        color: #4e4e4e;
+    }
+    .nav-item > a:hover {
+        color: #0a58ca;
+    }
+}
+
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
+    }
+    .navbar .dropdown .dropdown:hover > ul {
+        left: -100%;
+    }
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+}
+
+
+
+@media screen and (max-width:768px){
+    .home .home-title{
+        font-size: 3rem;
+    }
+    .home .home-subtitle{
+        font-size: 1.5rem;
+    }
+}
+/* END HOME SECTION  */
+
+/* START ABOUT SECTION  */
+
+
+/* END ABOUT SECTION  */
