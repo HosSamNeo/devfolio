@@ -1,6 +1,22 @@
+/* START MAIN COMPONENTS  */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.section-heading h3{
+    font-size: 3rem;
+}
+.section-heading .line{
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+.section-heading p{
+    font-size: 1rem !important;
+}
+/* END MAIN COMPONENTS  */
+
+
 /* START HOME SECTION  */
 .home {
     height: 100vh;
@@ -307,6 +323,40 @@ body {
     width: 100px;
     bottom: -12px;
 }
-
-
 /* END ABOUT SECTION  */
+
+/* START SERVICES SECTION  */
+.services {
+    background-color: #f5f5f5;
+}
+.services .service-box {
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.services .service-box .ico-circle{
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: flex;
+    transition: all 1s;
+    align-items: center;
+    justify-content: center;
+}
+.service-box .ico-circle i {
+    line-height: 0;
+    font-size: 40px;
+}
+.services .service-box:hover .ico-circle{
+    background-color: #0078ff;
+    box-shadow: 0 0 0 10px #cde1f8;
+}
+.services .service-box:hover .ico-circle i{
+    color: white;
+}
+/* END SERVICES SECTION  */
