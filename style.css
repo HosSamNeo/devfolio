@@ -455,3 +455,11 @@ body {
     width: 30px !important;
 }
 /* END BLOG SECTION  */
+
+/* START FOOTER SECTION  */
+footer {
+    padding: 30px 0px;
+    background-color: #0062d3;
+    color: white;
+}
+/* END FOOTER SECTION  */
